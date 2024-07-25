@@ -233,7 +233,11 @@ $switch-focus: 1px dotted $grey-light !default;
 
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
+    $color-invert: null;
+
+    if length($pair) > 1 {
+      $color-invert: nth($pair, 2);
+    }
 
     &.is-#{$name} {
       + label {
