@@ -235,7 +235,7 @@ $switch-focus: 1px dotted iv.$grey-light !default;
     @include switch-size(dv.$size-large);
   }
 
-  @each $name, $pair in $colors {
+  @each $name, $pair in dv.$colors {
     $color: nth($pair, 1);
     $color-invert: null;
 
