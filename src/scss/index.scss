@@ -221,18 +221,18 @@ $switch-focus: 1px dotted iv.$grey-light !default;
     }
   }
 
-  @include switch-size($size-normal);
+  @include switch-size(dv.$size-normal);
 
   &.is-small {
-    @include switch-size($size-small);
+    @include switch-size(dv.$size-small);
   }
 
   &.is-medium {
-    @include switch-size($size-medium);
+    @include switch-size(dv.$size-medium);
   }
 
   &.is-large {
-    @include switch-size($size-large);
+    @include switch-size(dv.$size-large);
   }
 
   @each $name, $pair in $colors {
