@@ -1,14 +1,16 @@
-@use "bulma/sass/utilities/initial-variables";
+@use "bulma/sass/utilities/derived-variables" as dv;
+@use "bulma/sass/utilities/initial-variables" as iv;
+@use "bulma/sass/utilities/controls" as c;
 
-$switch-background: initial-variables.$grey-light !default;
+$switch-background: iv.$grey-light !default;
 $switch-border: 0.1rem solid transparent !default;
-$switch-background-active: $primary !default;
-$switch-radius: $radius !default;
-$switch-paddle-background: $white !default;
-$switch-paddle-background-active: $primary !default;
+$switch-background-active: dv.$primary !default;
+$switch-radius: iv.$radius !default;
+$switch-paddle-background: iv.$white !default;
+$switch-paddle-background-active: dv.$primary !default;
 $switch-paddle-offset: 0.25rem !default;
 $switch-paddle-transition: all 0.25s ease-out !default;
-$switch-focus: 1px dotted initial-variables.$grey-light !default;
+$switch-focus: 1px dotted iv.$grey-light !default;
 
 @mixin switch-size($size) {
   $switch-height: $size * 1.5;
@@ -24,8 +26,8 @@ $switch-focus: 1px dotted initial-variables.$grey-light !default;
     align-items: center;
     justify-content: flex-start;
     font-size: $size;
-    height: $control-height;
-    line-height: $control-line-height;
+    height: c.$control-height;
+    line-height: c.$control-line-height;
     padding-left: $switch-width + 0.5;
     padding-top: 0.2rem;
     cursor: pointer;
@@ -159,7 +161,7 @@ $switch-focus: 1px dotted initial-variables.$grey-light !default;
 
       &::after,
       &:after {
-        box-shadow: 0px 0px 3px initial-variables.$grey;
+        box-shadow: 0px 0px 3px $grey;
       }
     }
   }
@@ -168,7 +170,7 @@ $switch-focus: 1px dotted initial-variables.$grey-light !default;
     + label {
       &::before,
       &:before {
-        border-radius: initial-variables.$radius-large * 4;
+        border-radius: iv.$radius-large * 4;
       }
 
       &::after,
